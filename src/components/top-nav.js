@@ -39,6 +39,6 @@ export function TopNav(props) {
             </ul>
         </nav>
     );
-}
+};
 
 export default connect()(TopNav);

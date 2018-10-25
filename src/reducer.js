@@ -4,10 +4,10 @@ const initialState = {
     guesses: [],
     feedback: 'Make your guess!',
     auralStatus: '',
-    correctAnswer: Math.round(Math.random() * 100) + 1
+    correctAnswer: Math.round(Math.random() * (100-1)) + 1
 };
 
-export default (state = initialState, action) => {
+export const gameReducer = (state = initialState, action) => {
     if (action.type === RESTART_GAME) {
         return Object.assign({}, state, {
             guesses: [],
